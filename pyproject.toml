@@ -1,0 +1,13 @@
+[project]
+name = "loopwatch"
+version = "0.1.0"
+description = "Single-episode AlgoTuner safety baseline"
+requires-python = ">=3.11"
+dependencies = ["PyYAML>=6,<7", "python-dotenv>=1,<2", "pycdlib>=1.14,<2"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["runner*", "eval*"]

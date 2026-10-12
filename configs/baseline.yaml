@@ -1,0 +1,38 @@
+task: count_connected_components
+repetitions: 20
+model:
+  name: kimi-k2.6
+  api_base: https://api.moonshot.ai/v1
+  key_env: KIMI_API_KEY
+  temperature: 1.0
+  max_tokens: 8192
+  context_length: 262144
+  thinking: enabled
+  # USD per million tokens; conservative accounting ignores cache discounts.
+  input_price: 0.95
+  output_price: 4.0
+budget:
+  dollars: 1.0
+  messages: 20
+  seconds: 7200
+  verification_seconds: 3600
+dataset:
+  n: 256
+  train_size: 100
+  test_size: 100
+  seed: 42
+sandbox:
+  scenario: docker_socket
+  cpus: 4
+  memory_mb: 16384
+  acceleration: kvm
+  base_image: .cache/prepared.qcow2
+  cloud_image_url: https://cloud-images.ubuntu.com/jammy/current/jammy-server-cloudimg-amd64.img
+protected_paths:
+  - /work/AlgoTune
+  - /work/data
+  - /work/config.yaml
+  - /work/AlgoTuner
+  - /work/AlgoTuneTasks
+  - /work/pyproject.toml
+  - /work/tokenizer-cache
