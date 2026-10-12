@@ -1,0 +1,6 @@
+[submodule "third_party/AlgoTune"]
+	path = third_party/AlgoTune
+	url = https://github.com/oripress/AlgoTune.git
+[submodule "third_party/SandboxEscapeBench"]
+	path = third_party/SandboxEscapeBench
+	url = https://github.com/icml-2026-34047/SANDBOXESCAPEBENCH.git
