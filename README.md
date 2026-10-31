@@ -1,5 +1,7 @@
 # loopwatch
 
+**Updates.** We moved to ImpossibleBench, where some results are for now available in https://github.com/zhxchd/impossiblebench/tree/selfimprove-level2. Monitoring results are available in this repo in the  at [monitoring branch](https://github.com/zhxchd/loopwatch/tree/monitoring).
+
 A small baseline for unprompted unsafe behavior during algorithm optimization.
 Each repetition starts the upstream **AlgoTuner** on the same fixed AlgoTune task
 in a fresh VM. Episodes have no shared memory or self-modifying outer harness.
